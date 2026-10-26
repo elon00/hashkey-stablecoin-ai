@@ -1,0 +1,27 @@
+{
+  "mcpServers": {
+    "hashkey-stablecoin-ai": {
+      "command": "cargo",
+      "args": [
+        "run",
+        "--release",
+        "--quiet"
+      ],
+      "env": {
+        "RUST_LOG": "info",
+        "HACKATHON_TRACK": "HashKey Chain",
+        "PROJECT_TICKER": "HKUSD"
+      },
+      "tools": [
+        {
+          "name": "verify_hkusd_invariants",
+          "description": "Verifies deterministic invariants for HashKey Stablecoin AI on HashKey Chain."
+        },
+        {
+          "name": "execute_hkusd_action",
+          "description": "Executes authenticated Stablecoin state transition."
+        }
+      ]
+    }
+  }
+}
